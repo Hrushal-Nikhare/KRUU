@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "@vercel/analytics": "^0.1.8"
-  }
+  },
+  "name": "kruu",
+  "description": "A Survey",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hrushal-Nikhare/KRUU.git"
+  },
+  "author": "Hrushal Nikhare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hrushal-Nikhare/KRUU/issues"
+  },
+  "homepage": "https://github.com/Hrushal-Nikhare/KRUU#readme"
 }
