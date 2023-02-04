@@ -94,7 +94,8 @@
 			</div>
 			<br>
 			<div>
-				<button type="submit" id="submit-form">Submit</button>
+				<button type="submit"
+					id="submit-form">Submit</button>
 			</div>
 			<br><br>
 		</form>
@@ -115,7 +116,7 @@
 				dataType: "json",
 				data: $form.serializeObject()
 			}).done(
-				console.log("Success")
+				window.location.href = 'https://kruu-survey.vercel.app/Thank%20You.html'
 			);
 		})
 	</script>
