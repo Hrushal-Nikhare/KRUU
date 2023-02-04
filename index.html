@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="pico.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<hgroup>
+			<h1>KRUU Survey</h1>
+			<p>Thank you for participating in this Survey! There are 12 questions you can answer.Please Fill them all </p>
+		</hgroup>
+		<br>
+		<form id="test-form">
+		<div>
+			<label>Name</label>
+			<input type="text" name="Name" placeholder="Elon Musk" />
+		</div>
+		<div>
+			<label>Age</label>
+			<input type="text" name="Age" placeholder="51" />
+		</div>
+		<div>
+			<label>Gender</label>
+			<input type="text" name="Gender" placeholder="Male" />
+		</div>
+		<div>
+			<label>Do you have diabetes?</label>
+			<input type="text" name="Diabetes" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>Do you have cholestrol?</label>
+			<input type="text" name="Cholestrol" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>Do you have high blood pressure or hypertension?</label>
+			<input type="text" name="Hypertension" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>Are you showing any symptoms of flu?</label>
+			<input type="text" name="Flu" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>Have you recently travelled anywhere?</label>
+			<input type="text" name="Travel" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>For how many days did you travel?</label>
+			<input type="text" name="Duration" placeholder="7-8 days" />
+		</div>
+
+		<div>
+			<label>Did you take any vaccines that were recommended to take before traveling to that destination?</label>
+			<input type="text" name="Vaccines" placeholder="Yes/No" />
+		</div>
+
+		<div>
+			<label>How often do you fall sick?</label>
+			<input type="text" name="Frequency" placeholder="Often/Not so often" />
+		</div>
+<br>
+		<div>
+			<button type="submit" id="submit-form">Submit</button>
+		</div>
+
+	</form>
+	</div>
+	<script src="jquery-3.6.3.min.js"></script>
+	<script src="jquery.serialize-object.min.js"></script>
+	<script>
+
+		var $form = $('form#test-form'),
+			url = 'https://script.google.com/macros/s/AKfycbxAQnmADo9ZRN1JTvyM2pxTnhd6mEPopaGe70dkPPXmk9yyhJIV-vjDD68uGN_fxMDx/exec'
+
+		$('#submit-form').on('click', function (e) {
+			e.preventDefault();
+			var jqxhr = $.ajax({
+				url: url,
+				method: "GET",
+				dataType: "json",
+				data: $form.serializeObject()
+			}).done(
+				console.log("Success")
+			);
+		})
+	</script>
+
+</body>
+
+</html>
