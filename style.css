@@ -12,5 +12,7 @@ body{
   z-index: 999;
 }
 .container{
-  background-color: inherit;
+  padding: 40px;
+  background-image: none;
+  background: none;
 }
